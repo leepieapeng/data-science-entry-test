@@ -5,7 +5,15 @@ def update_dictionary(dct, key, value):
     - If the key already exists in dct, print the original value, then update its value.
     - Return the updated dictionary.
     """
-    return
+    if not isinstance(dct, dict):
+        return {}
+
+    if key in dct:
+        print("Original value:", dct[key])
+    
+    dct[key] = value
+    return dct
+
 
 
 # Task 2
